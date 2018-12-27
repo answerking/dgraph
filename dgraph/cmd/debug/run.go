@@ -25,7 +25,6 @@ import (
 	"math"
 	"strconv"
 	"strings"
-	"time"
 
 	"github.com/dgraph-io/badger"
 	"github.com/dgraph-io/badger/options"
@@ -622,11 +621,6 @@ func sizeHistogram(db *badger.DB) {
 
 		loop++
 	}
-
-	// Sleep for a bit to ensure that the data is properly aggregated before
-	// printing.
-	sleepDuration, _ := time.ParseDuration("500ms")
-	time.Sleep(sleepDuration)
 
 	fmt.Printf("prefix = %s\n", hex.Dump(prefix))
 	fmt.Printf("Found %d keys\n", loop)
