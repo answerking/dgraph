@@ -38,8 +38,8 @@ import (
 )
 
 var (
-	Debug             x.SubCommand
-	opt               flagOptions
+	Debug x.SubCommand
+	opt   flagOptions
 )
 
 type flagOptions struct {
